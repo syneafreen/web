@@ -25,6 +25,7 @@ then
 fi
 echo $(pwd)
 chmod +x env.vars.sh
+dos2unix env.vars.sh
 source env.vars.sh $servertype && echo "environment variables set" || exit 1;
 mkdir server-dist/conf
 version=$( date '+%Y%m%d%H%M%S%Z' )
