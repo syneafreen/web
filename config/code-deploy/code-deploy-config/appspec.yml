@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: tomcat.zip
+    destination: /tmp/cd
+  - source: dist.zip
+    destination: /tmp/cd
+  - source: ftp-files.zip
+    destination: /tmp/cd
+hooks:
+  BeforeInstall:
+    - location: server_scripts/clear_last_deploy.sh
+      timeout: 30
+      runas: root
+  ApplicationStart:
+    - location: server_scripts/add_start_servers.sh
+      timeout: 600
+      runas: root
+  ValidateService:
+    - location: server_scripts/tests.sh
+      timeout: 600
+      runas: root
