@@ -9,14 +9,14 @@ files:
     destination: /tmp/cd
 hooks:
   BeforeInstall:
-    - location: server_scripts/clear_last_deploy.sh
+    - location: conf/server_scripts/clear_last_deploy.sh
       timeout: 30
       runas: root
   ApplicationStart:
-    - location: server_scripts/add_start_servers.sh
+    - location: conf/server_scripts/add_start_servers.sh
       timeout: 600
       runas: root
   ValidateService:
-    - location: server_scripts/tests.sh
+    - location: conf/server_scripts/tests.sh
       timeout: 600
       runas: root
