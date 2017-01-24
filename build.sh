@@ -24,7 +24,7 @@ then
 	exit 1;
 fi
 echo $(pwd)
-source ../web/env-vars.sh $servertype && echo "environment variables set" || exit 1;
+source env-vars.sh $servertype && echo "environment variables set" || exit 1;
 mkdir server-dist/conf
 version=$( date '+%Y%m%d%H%M%S%Z' )
 echo $version
