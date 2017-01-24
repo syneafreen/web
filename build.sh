@@ -26,7 +26,7 @@ fi
 echo $(pwd)
 #chmod +x env.vars.sh
 #dos2unix env.vars.sh
-source ./env.vars.sh $servertype && echo "environment variables set" || exit 1;
+. ./env.vars.sh $servertype && echo "environment variables set" || exit 1;
 export awsAppName="crossover-test"
 export awsAppGroupName="crossover-grp-test"
 export AWS_DEFAULT_REGION="us-east-1"
