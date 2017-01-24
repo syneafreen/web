@@ -39,7 +39,7 @@ cp -vr config/server_scripts/ server-dist/conf
 
 cd  server-dist
 zip -r dist.zip conf
-cp -v config/code-deploy/code-deploy-config/appspec.yml server-dist/
+cp -v ../config/code-deploy/code-deploy-config/appspec.yml server-dist/
 cd ..
 
 echo "Deploying stack-app-${version}.zip into ${awsBucketName} bucket of application ${awsAppName} of ${awsAppGroupName} group"
