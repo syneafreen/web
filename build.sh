@@ -24,9 +24,13 @@ then
 	exit 1;
 fi
 echo $(pwd)
-chmod +x env.vars.sh
-dos2unix env.vars.sh
-source env.vars.sh $servertype && echo "environment variables set" || exit 1;
+#chmod +x env.vars.sh
+#dos2unix env.vars.sh
+#source env.vars.sh $servertype && echo "environment variables set" || exit 1;
+export awsAppName="crossover-test"
+export awsAppGroupName="crossover-grp-test"
+	#TODO: switch to suffixed bucket name
+export awsBucketName="cross-over"
 mkdir server-dist/conf
 version=$( date '+%Y%m%d%H%M%S%Z' )
 echo $version
