@@ -19,6 +19,7 @@ mv -v /tmp/cd/dist.zip /var/www/html/ || exit 1
 cd /var/www/html
 unzip -o dist.zip #-d /var/www/html-admin/
 rm -rf dist
+mv conf/index.html .
 chmod og=r,u=rw index.html
 chmod -R a+rx /var/www/html/
 service httpd restart
