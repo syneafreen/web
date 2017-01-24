@@ -24,6 +24,7 @@ then
 	exit 1;
 fi
 echo $(pwd)
+chmod +x env-vars.sh
 source env-vars.sh $servertype && echo "environment variables set" || exit 1;
 mkdir server-dist/conf
 version=$( date '+%Y%m%d%H%M%S%Z' )
