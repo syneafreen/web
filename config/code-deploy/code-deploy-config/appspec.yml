@@ -1,11 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: tomcat.zip
-    destination: /tmp/cd
   - source: dist.zip
-    destination: /tmp/cd
-  - source: ftp-files.zip
     destination: /tmp/cd
 hooks:
   BeforeInstall:
