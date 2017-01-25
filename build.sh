@@ -27,10 +27,7 @@ echo $(pwd)
 #chmod +x env.vars.sh
 #dos2unix env.vars.sh
 . ./env.vars.sh $servertype && echo "environment variables set" || exit 1;
-export awsAppName="crossover-test"
-export awsAppGroupName="crossover-grp-test"
-export AWS_DEFAULT_REGION="us-east-1"
-export awsBucketName="cross-over"
+
 mkdir -p server-dist/conf
 version=$( date '+%Y%m%d%H%M%S%Z' )
 echo $version
